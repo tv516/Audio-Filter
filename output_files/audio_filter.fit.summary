@@ -1,0 +1,20 @@
+Fitter Status : Successful - Fri Dec 02 09:36:23 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : audio_filter
+Top-level Entity Name : audio_demo
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 1,457 / 32,070 ( 5 % )
+Total registers : 1990
+Total pins : 104 / 457 ( 23 % )
+Total virtual pins : 0
+Total block memory bits : 543,872 / 4,065,280 ( 13 % )
+Total RAM Blocks : 74 / 397 ( 19 % )
+Total DSP Blocks : 9 / 87 ( 10 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1 / 6 ( 17 % )
+Total DLLs : 0 / 4 ( 0 % )

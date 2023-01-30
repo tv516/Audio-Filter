@@ -1,0 +1,34 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst nios_system.nios2_gen2_0 -pg 1 -lvl 2 -y 680
+preplace inst nios_system.jtag_uart_0 -pg 1 -lvl 3 -y 430
+preplace inst nios_system.nios2_gen2_0.clock_bridge -pg 1
+preplace inst nios_system -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst nios_system.sysid -pg 1 -lvl 3 -y 710
+preplace inst nios_system.sys_sdram_pll_0.sys_pll -pg 1
+preplace inst nios_system.onchip_memory2_1 -pg 1 -lvl 3 -y 630
+preplace inst nios_system.new_sdram_controller_0 -pg 1 -lvl 3 -y 910
+preplace inst nios_system.sys_sdram_pll_0 -pg 1 -lvl 1 -y 870
+preplace inst nios_system.audio_filter_comp -pg 1 -lvl 3 -y 350
+preplace inst nios_system.audio_and_video_config_0 -pg 1 -lvl 3 -y 30
+preplace inst nios_system.nios2_gen2_0.cpu -pg 1
+preplace inst nios_system.sys_sdram_pll_0.reset_from_locked -pg 1
+preplace inst nios_system.timer_0 -pg 1 -lvl 3 -y 530
+preplace inst nios_system.switches -pg 1 -lvl 3 -y 790
+preplace inst nios_system.pin -pg 1 -lvl 3 -y 250
+preplace inst nios_system.nios2_gen2_0.reset_bridge -pg 1
+preplace inst nios_system.audio_0 -pg 1 -lvl 3 -y 130
+preplace netloc FAN_OUT<net_container>nios_system</net_container>(SLAVE)sysid.clk,(SLAVE)pin.clk,(SLAVE)onchip_memory2_1.clk1,(SLAVE)nios2_gen2_0.clk,(SLAVE)audio_0.clk,(SLAVE)audio_filter_comp.clock,(SLAVE)new_sdram_controller_0.clk,(SLAVE)timer_0.clk,(MASTER)sys_sdram_pll_0.sys_clk,(SLAVE)switches.clk,(SLAVE)audio_and_video_config_0.clk,(SLAVE)jtag_uart_0.clk) 1 1 2 310 620 750
+preplace netloc INTERCONNECT<net_container>nios_system</net_container>(MASTER)sys_sdram_pll_0.reset_source,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)audio_filter_comp.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)timer_0.reset,(SLAVE)switches.reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)new_sdram_controller_0.reset,(SLAVE)audio_0.reset,(SLAVE)onchip_memory2_1.reset1,(SLAVE)sysid.reset,(SLAVE)pin.reset,(SLAVE)audio_and_video_config_0.reset) 1 1 2 330 920 710
+preplace netloc FAN_OUT<net_container>nios_system</net_container>(SLAVE)timer_0.irq,(SLAVE)jtag_uart_0.irq,(MASTER)nios2_gen2_0.irq) 1 2 1 690
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)pin.external_connection,(SLAVE)nios_system.pin) 1 0 3 NJ 280 NJ 280 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)sys_sdram_pll_0.ref_clk,(SLAVE)nios_system.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.i2c,(SLAVE)audio_and_video_config_0.external_interface) 1 0 3 NJ 80 NJ 80 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.sdram,(SLAVE)new_sdram_controller_0.wire) 1 0 3 NJ 980 NJ 980 NJ
+preplace netloc INTERCONNECT<net_container>nios_system</net_container>(MASTER)nios2_gen2_0.data_master,(SLAVE)onchip_memory2_1.s1,(SLAVE)timer_0.s1,(SLAVE)audio_0.avalon_audio_slave,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)audio_filter_comp.avalon_slave_0_1,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)switches.s1,(SLAVE)audio_and_video_config_0.avalon_av_config_slave,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)sysid.control_slave,(SLAVE)new_sdram_controller_0.s1,(SLAVE)pin.s1) 1 1 2 330 640 730
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)sys_sdram_pll_0.ref_reset,(SLAVE)nios_system.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.audio,(SLAVE)audio_0.external_interface) 1 0 3 NJ 180 NJ 180 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(MASTER)sys_sdram_pll_0.sdram_clk,(MASTER)nios_system.sdram_clk) 1 1 3 NJ 900 NJ 900 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)switches.external_connection,(SLAVE)nios_system.switches) 1 0 3 NJ 820 NJ 820 NJ
+levelinfo -pg 1 0 60 1080
+levelinfo -hier nios_system 70 150 450 820 990
